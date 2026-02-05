@@ -47,7 +47,7 @@ with col1:
     st.write("Ask questions:")
 
 with col2:
-    st.image(r"C:\Users\ChandruS\Downloads\Email Logo.png",
+    st.image("Qualesce Logo.png",
         width=500,size=20
     )
 
@@ -108,7 +108,7 @@ if prompt := st.chat_input("Ask your question here..."):
         retrieveAndGenerateConfiguration={
             "type": "KNOWLEDGE_BASE",
             "knowledgeBaseConfiguration": {
-                "knowledgeBaseId": "XHZTEYZPSB",
+                "knowledgeBaseId": "HGWSAMUGCM",
                 "modelArn": "arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0"
             }
         }
@@ -123,3 +123,4 @@ if prompt := st.chat_input("Ask your question here..."):
     st.session_state["messages"].append(
         {"role": "assistant", "content": answer}
     )
+
