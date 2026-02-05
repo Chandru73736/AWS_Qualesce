@@ -12,7 +12,7 @@ st.markdown(
     """
     <style>
         .stApp {
-            background-color: #87CEEB;
+            background-color: #e6f0ff;
         }
 
         h1, h2, h3 {
@@ -124,6 +124,7 @@ if prompt := st.chat_input("Ask your question here..."):
     st.session_state["messages"].append(
         {"role": "assistant", "content": answer}
     )
+
 
 
 
