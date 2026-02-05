@@ -48,7 +48,7 @@ with col1:
 
 with col2:
     st.image(
-        "Email Logo.png",
+        "Qualesce Logo.png",
        width=250
     )
 
@@ -124,6 +124,7 @@ if prompt := st.chat_input("Ask your question here..."):
     st.session_state["messages"].append(
         {"role": "assistant", "content": answer}
     )
+
 
 
 
