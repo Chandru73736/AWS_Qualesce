@@ -30,7 +30,7 @@ st.markdown(
         }
 
         .stChatMessage.assistant {
-            background-color: #ffffff;
+            background-color: #f5f9ff;
             border-radius: 10px;
             padding: 10px;
         }
@@ -124,6 +124,7 @@ if prompt := st.chat_input("Ask your question here..."):
     st.session_state["messages"].append(
         {"role": "assistant", "content": answer}
     )
+
 
 
 
