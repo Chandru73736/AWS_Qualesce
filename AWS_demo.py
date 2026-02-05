@@ -15,14 +15,20 @@ st.markdown(
             background-color: #f5f9ff;
         }
 
-        h1, h2, h3 {
+        h1, h2 {
             color: #0b3c6d;
         }
 
+        h3 {
+            color: #0b3c6d;
+        }
+
+        /* Sidebar */
         section[data-testid="stSidebar"] {
             background-color: #e6f0ff;
         }
 
+        /* Chat bubbles */
         .stChatMessage.user {
             background-color: #d9e8ff;
             border-radius: 10px;
@@ -33,6 +39,12 @@ st.markdown(
             background-color: #f5f9ff;
             border-radius: 10px;
             padding: 10px;
+        }
+
+        /* 🔽 Make Topic History header slightly smaller */
+        div[data-testid="column"]:last-child h3 {
+            font-size: 16px !important;   /* default ~20px */
+            margin-bottom: 8px !important;
         }
     </style>
     """,
@@ -88,15 +100,10 @@ with chat_col:
     chat_container = st.container()
 
     with chat_container:
-        st.markdown('<div class="chat-container">', unsafe_allow_html=True)
-
         for msg in st.session_state["messages"][st.session_state["topic"]]:
             with st.chat_message(msg["role"]):
                 st.markdown(msg["content"])
 
-        st.markdown('</div>', unsafe_allow_html=True)
-
-    # 🔽 Chat input ALWAYS at bottom
     prompt = st.chat_input("Ask your question here...")
 
     if prompt:
@@ -142,4 +149,3 @@ with history_col:
                 for i, m in enumerate(msgs):
                     if m["role"] == "user":
                         st.markdown(f"**Q{i+1}:** {m['content'][:80]}...")
-
