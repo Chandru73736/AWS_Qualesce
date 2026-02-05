@@ -30,7 +30,7 @@ st.markdown(
         }
 
         .stChatMessage.assistant {
-            background-color: #f5f9ff;
+            background-color: #ffffff;
             border-radius: 10px;
             padding: 10px;
         }
@@ -40,16 +40,15 @@ st.markdown(
 )
 
 # ---------------- Header with Logo (Top Right) ----------------
-col1, col2 = st.columns([6, 1.6])
+col1, col2 = st.columns([7, 1])
 
 with col1:
     st.title("🤖 Qualesce Knowledge Assistant")
     st.write("Ask questions:")
 
 with col2:
-    st.image(
-        "Qualesce Logo.png",
-       width=350
+    st.image(r"C:\Users\ChandruS\Downloads\Email Logo.png",
+        width=500,size=20
     )
 
 # ---------------- Load AWS credentials ----------------
@@ -109,7 +108,7 @@ if prompt := st.chat_input("Ask your question here..."):
         retrieveAndGenerateConfiguration={
             "type": "KNOWLEDGE_BASE",
             "knowledgeBaseConfiguration": {
-                "knowledgeBaseId": "HGWSAMUGCM",
+                "knowledgeBaseId": "XHZTEYZPSB",
                 "modelArn": "arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0"
             }
         }
@@ -124,19 +123,3 @@ if prompt := st.chat_input("Ask your question here..."):
     st.session_state["messages"].append(
         {"role": "assistant", "content": answer}
     )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
