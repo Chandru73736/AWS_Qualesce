@@ -48,7 +48,7 @@ with col1:
 
 with col2:
     st.image("Qualesce Logo.png",
-        width=500,size=20
+        width=500
     )
 
 # ---------------- Load AWS credentials ----------------
@@ -123,4 +123,5 @@ if prompt := st.chat_input("Ask your question here..."):
     st.session_state["messages"].append(
         {"role": "assistant", "content": answer}
     )
+
 
