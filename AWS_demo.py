@@ -46,7 +46,7 @@ with col1:
     st.write("Ask questions based on internal knowledge")
 
 with col2:
-    st.image(Qualesce Logo.png", width=300)
+    st.image("Qualesce Logo.png", width=300)
 
 # ---------------- AWS Secrets ----------------
 AWS_ACCESS_KEY_ID = st.secrets["AWS_ACCESS_KEY_ID"]
@@ -142,3 +142,4 @@ with history_col:
                 for i, m in enumerate(msgs):
                     if m["role"] == "user":
                         st.markdown(f"**Q{i+1}:** {m['content'][:80]}...")
+
