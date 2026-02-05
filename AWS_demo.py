@@ -40,7 +40,7 @@ st.markdown(
 )
 
 # ---------------- Header with Logo (Top Right) ----------------
-col1, col2 = st.columns([6, 1])
+col1, col2 = st.columns([6, 1.6])
 
 with col1:
     st.title("🤖 Qualesce Knowledge Assistant")
@@ -124,6 +124,7 @@ if prompt := st.chat_input("Ask your question here..."):
     st.session_state["messages"].append(
         {"role": "assistant", "content": answer}
     )
+
 
 
 
