@@ -149,3 +149,4 @@ with history_col:
                 for i, m in enumerate(msgs):
                     if m["role"] == "user":
                         st.markdown(f"**Q{i+1}:** {m['content'][:80]}...")
+
